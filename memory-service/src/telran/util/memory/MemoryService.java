@@ -1,6 +1,6 @@
 package telran.util.memory;
 
-
+// V. R. All is OK
 
 public class MemoryService {
 public static int getMaxAvailableMemory() {
@@ -12,6 +12,10 @@ public static int getMaxAvailableMemory() {
 	byte ar[] = null;
 
 	while (left <= right) {
+		/* V.R.
+		 *  The other way to do the same is following
+		 *  middle = (int) ((left + (long)right) / 2);
+		 */
 		middle = left/2 + right/2;
 		try {
 			ar = new byte[middle];
